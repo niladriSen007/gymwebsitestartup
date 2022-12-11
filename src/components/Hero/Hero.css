@@ -1,0 +1,118 @@
+.watch-me
+{
+    animation: animButton 3s linear infinite alternate;
+}
+@keyframes animButton
+{
+    from{
+        background-color: #9f24f9;
+    }
+    to
+    {
+        background-color: #6617a7;
+    }
+}
+
+.image1
+{
+    position: relative;
+}
+.image1::before
+{
+    content: "";
+    width: 260px;
+    height:260px;
+    position: absolute;
+    background-color: red;
+    background-color: rgb(170, 95, 224);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+.image1::after
+{
+    content: "";
+    width: 350px;
+    height:350px;
+    position: absolute;
+    background-color: rgb(134, 44, 199);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -2;
+}
+
+.image1 img
+{
+    animation: anim 3s ease-in-out infinite alternate;
+}
+@keyframes anim{
+    from
+    {
+        transform: scale(.75);
+    }
+   to
+   {
+    transform:scale(.85);
+   }
+}
+
+.heart
+{
+    fill: red;
+    
+}
+.location
+{
+    fill:royalblue
+}
+.image1 div:first-of-type
+{
+    animation: upDown1 2s linear infinite alternate;
+}
+@keyframes upDown1
+{
+    from{
+        transform: translateY(-10px);
+    }to{
+        transform: translateY(10px);
+    }
+}
+
+.image1 div:last-of-type
+{
+    animation: upDown2 2s linear infinite alternate;
+}
+@keyframes upDown2
+{
+    from{
+        transform: translateY(10px);
+    }to{
+        transform: translateY(-10px);
+    }
+}
+
+
+@media screen and(max-width:476px) {
+    .image1
+    {
+        position: relative;
+    }
+    .image1::before
+    {
+        position: absolute;
+        width: 200px;
+        height:200px;
+        background-color: red;
+    }
+    .image1::after
+    {
+        position: absolute;
+        width: 260px;
+        height:260px;
+    }
+}
+
